@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+* {
+  font-family: 'Rubik', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.025em;
+  
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  .font-outline-2 {
+    -webkit-text-stroke: 2px white;
+  }
+  .font-outline-4 {
+    -webkit-text-stroke: 4px white;
+  }
+  .hover-animate {
+    @apply hover:hover:-translate-y-1 transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-110
+  }
+}
+
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.header.scrolled {
+  background-color: rgba(62, 52, 91, 0.8)!important;
+  /* backdrop-filter: blur(90px); */
+}
