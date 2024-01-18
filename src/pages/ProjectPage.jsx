@@ -23,7 +23,7 @@ const ProjectPage = () => {
       <NavBar backgroundColor={"rgba(62, 52, 91, 0.8)"} />
       <div className="max-w-[1040px] mx-auto md:pl-4 md:pr-4 lg:pr-20 p-4 py-16 pt-40 text-gray-500 bg-white">
         <ProjectButtons currentProject={currentProject} />
-        <h1 className="text-4xl mt-6 font-bold text-indigo-900 hover-animate">
+        <h1 className="text-4xl mt-6 font-bold text-indigo-900 md:hover-animate">
           {currentProject?.name}
         </h1>
         <div className="flex flex-wrap py-1">
@@ -32,7 +32,7 @@ const ProjectPage = () => {
             <a
               href={projectLink?.url}
               key={index}
-              className="flex items-center underline hover-animate pr-4"
+              className="flex items-center underline md:hover-animate pr-4"
               target="_blank"
             >
               <projectLink.icon />
@@ -43,13 +43,13 @@ const ProjectPage = () => {
         <div className="flex flex-wrap py-1">
           <p className="pr-2">Technologies:</p>
           {currentProject?.technologies.map((Technology, index) => (
-            <p key={index} className="px-1 flex items-center hover-animate">
+            <p key={index} className="px-1 flex items-center md:hover-animate">
               <Technology size={25} />
             </p>
           ))}
         </div>
-        <p className="py-8 hover-animate">{currentProject?.descriptionLong}</p>
-        <div className="hover-animate flex flex-col justify-center">
+        <p className="py-8 md:hover-animate">{currentProject?.descriptionLong}</p>
+        <div className="md:hover-animate flex flex-col justify-center">
           {currentProject?.display.notes && (
             <p className="italic px-4 pb-2 sm:px-10">* Note: {currentProject?.display.notes}</p>
           )}
@@ -74,7 +74,7 @@ const ProjectPage = () => {
           )}
         </div>
 
-        <div id="why" className="hover-animate">
+        <div id="why" className="md:hover-animate">
           <h3 className="text-4xl font-bold text-indigo-900 pt-20">My <span className="text-indigo-400">why</span></h3>
           <div className="flex flex-wrap items-center pt-4">
             <p className="w-full md:w-1/2 md:pr-4">{currentProject?.why}</p>
@@ -82,7 +82,7 @@ const ProjectPage = () => {
           </div>
         </div>
 
-        <div id="process" className="hover-animate">
+        <div id="process" className="md:hover-animate">
           <h3 className="text-4xl font-bold text-indigo-900 pt-20 text-end max-md:text-left">The <span className="text-indigo-400">process</span> I took</h3>
           <div className="flex flex-wrap items-center pt-4">
             <img className="w-full md:w-1/2 rounded-lg mb-4 md:mb-0" src={currentProject?.processPic} alt="" />
@@ -90,7 +90,7 @@ const ProjectPage = () => {
           </div>
         </div>
 
-        <div id="lessons" className="hover-animate">
+        <div id="lessons" className="md:hover-animate">
           <h3 className="text-4xl font-bold text-indigo-900 pt-20">Lessons <span className="text-indigo-400">learned</span></h3>
           <div className="flex flex-wrap items-center pt-4">
             <p className="w-full md:w-1/2 md:pr-4">{currentProject?.lesson}</p>
@@ -101,7 +101,7 @@ const ProjectPage = () => {
         <div className="pt-20 flex items-center flex-wrap">
           <Link
             to={"/"}
-            className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-indigo-900 rounded-lg hover:bg-indigo-900 focus:ring-4 focus:outline-none dark:bg-indigo-500 dark:hover:bg-indigo-900 mr-4 hover-animate"
+            className="max-sm:mb-4 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-indigo-900 rounded-lg hover:bg-indigo-900 focus:ring-4 focus:outline-none dark:bg-indigo-500 dark:hover:bg-indigo-900 mr-4 md:hover-animate"
           >
             Back to home
           </Link>
