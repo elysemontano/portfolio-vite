@@ -90,7 +90,6 @@ const projectData = [
       lessonPic: bandWireframe,
       technologies: [FaReact, SiRubyonrails, FaGitAlt, DiHeroku],
       links: [
-          {icon: AiFillGithub, url: "https://github.com/elysemontano/team-organizer", description: "GitHub Repo"},
           {icon: AiOutlineLink, url: "https://chasing-out-foxes-organizer.herokuapp.com/", description: "Deployed App"}
       ]
   },
