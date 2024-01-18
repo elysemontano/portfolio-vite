@@ -25,10 +25,10 @@ const ProjectButtons = ({currentProject}) => {
     window.scrollTo(0, 0);
   };
   return (
-    <>
+    <div className="sm:flex sm:items-center">
       <button
         onClick={previousProject}
-        className={`inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-indigo-900 rounded-lg hover:bg-indigo-900 focus:ring-4 focus:outline-none dark:bg-indigo-500 dark:hover:bg-indigo-900 mr-4 hover-animate ${
+        className={`max-sm:mb-4 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-indigo-900 rounded-lg hover:bg-indigo-900 focus:ring-4 focus:outline-none dark:bg-indigo-500 dark:hover:bg-indigo-900 mr-4 hover-animate ${
           isAtFirstProject ? "hidden" : ""
         }`}
       >
@@ -53,7 +53,7 @@ const ProjectButtons = ({currentProject}) => {
         {projectData[calculateAdvanceProject() - 1]?.name}
         <FaArrowRight className="ml-2" />
       </button>
-    </>
+    </div>
   );
 };
 

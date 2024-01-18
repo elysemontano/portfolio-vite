@@ -17,17 +17,17 @@ const Welcome = () => {
         }}
       />
       <div className="pt-15 max-w-screen-lg mx-auto h-full flex flex-col justify-center lg:items-start items-center text-white relative z-10 lg:px-8">
-        <h1 className="sm:text-4xl text-2xl text-white font-Rubik font-extrabold tracking-widest pt-20 hover-animate max-xs:text-center">
+        <h1 className="sm:text-4xl text-2xl text-white font-Rubik font-extrabold tracking-widest pt-20 md:hover-animate max-xs:text-center">
           Hello, I'm Elyse Montano
         </h1>
-        <h2 className="xs:text-lg max-xs:text-center text-md text-white tracking-widest  hover-animate">
+        <h2 className="xs:text-lg max-xs:text-center text-md text-white tracking-widest  md:hover-animate">
           A full stack{" "}
           <span className="text-indigo-400 font-bold up">developer</span> and web
           development{" "}
           <span className="text-indigo-400 font-bold">instructor</span>
         </h2>
         <div className="md:flex items-center md:px-8">
-          <div className="hover-animate pr-14 max-md:hidden">
+          <div className="md:hover-animate pr-14 max-md:hidden">
             <img
               src={ProfilePic}
               className="object-scale-down h-20 rounded-full"
@@ -44,7 +44,7 @@ const Welcome = () => {
               </a>
             </div>
           </div>
-          <div className="max-md:px-8 max-md:text-center hover-animate max-sm:text-sm">
+          <div className="max-md:px-8 max-md:text-center md:hover-animate max-sm:text-sm">
             <p className=" text-white pt-10 pb-4">
               I specialize in creating and teaching full-stack applications
               using Ruby on Rails and React.

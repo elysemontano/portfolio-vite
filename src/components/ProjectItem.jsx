@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const ProjectItem = ({ project }) => {
   return (
-    <div className="max-w-sm bg-white shadow-xl shadow-gray-300 rounded-lg dark:border-gray-700 flex flex-col items-center h-200 w-full hover-animate">
+    <div className="max-w-sm bg-white shadow-xl shadow-gray-300 rounded-lg dark:border-gray-700 flex flex-col items-center h-200 w-full md:hover-animate">
       <div className="h-full">
         <img className="p-10 w-full" src={project.img1} alt="" />
       </div>
