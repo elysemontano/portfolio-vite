@@ -1,4 +1,4 @@
-import React from 'react';
+import {useState} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
@@ -10,12 +10,27 @@ import PDFViewer from './components/PDFViewer';
 
 
 const App = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState(null);
+
+  const openModal = (image) => {
+    if (!isModalOpen) {
+      setModalImage(image);
+      setIsModalOpen(true);
+    }
+  };
+  
+  const closeModal = () => {
+    setModalImage(null);
+    setIsModalOpen(false);
+  };
+  
   return (
     <>
       <Router>
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/project-details/:id" element={<ProjectPage />} />
+          <Route exact path="/" element={<Home isModalOpen={isModalOpen} openModal={openModal} closeModal={closeModal} modalImage={modalImage} />} />
+          <Route path="/project-details/:id" element={<ProjectPage isModalOpen={isModalOpen} openModal={openModal} closeModal={closeModal} modalImage={modalImage} />} />
         </Routes>
       </Router>
       <PDFViewer />

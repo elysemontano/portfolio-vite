@@ -1,19 +1,31 @@
-import React from "react";
+import {useState} from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import ImageModal from "./ImageModal";
 
-const ProjectItem = ({ project }) => {
+const ProjectItem = ({ project, isModalOpen, openModal }) => {
+
+
   return (
-    <div className="max-w-sm bg-white shadow-xl shadow-gray-300 rounded-lg dark:border-gray-700 flex flex-col items-center h-200 w-full md:hover-animate">
-      <div className="h-full">
-        <img className="p-10 w-full" src={project.img1} alt="" />
-      </div>
+    <div className="max-w-sm bg-white shadow-xl shadow-indigo-900/30 rounded-lg dark:border-gray-700 flex flex-col items-center h-200 w-full md:hover-animate">
+      <button
+        className="h-full block text-whitefocus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+        onClick={() => !isModalOpen && openModal(project.img1)}
+      >
+        <img className="p-10 w-full" src={project?.img1} alt="" />
+      </button>
+
       <div className="p-5">
-        <a href="#">
-          <h5 className="text-2xl font-bold tracking-wide text-indigo-900">
-            {project.name}
-          </h5>
-        </a>
+        <h5 className="text-2xl font-bold tracking-wide text-indigo-900">
+          {project.name}
+        </h5>
+        <div className="flex flex-wrap mt-2 mb-4">
+          {project?.technologies.map((Technology, index) => (
+            <p key={index} className="px-1 flex items-center md:hover-animate">
+              <Technology size={20} />
+            </p>
+          ))}
+        </div>
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-500">
           {project.descriptionShort}
         </p>

@@ -5,7 +5,7 @@ import Skills from '../components/Skills';
 import Projects from '../components/Projects'
 import Footer from '../components/Footer'
 
-const Home = () => {
+const Home = ({isModalOpen, openModal, closeModal, modalImage }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
@@ -38,8 +38,10 @@ const Home = () => {
       </div>
       <NavBar scrollPosition={scrollPosition} scrollToSection={scrollToSection} />
       <Skills  />
-      <Projects  />
-      <Footer />
+      <Projects  isModalOpen={isModalOpen} openModal={openModal} closeModal={closeModal} modalImage={modalImage} />
+      <div className='lg:pl-28 md:pl-20'>
+        <Footer />
+      </div>
     </>
   );
 };
