@@ -43,3 +43,7 @@ html {
   background-color: rgba(62, 52, 91, 0.8)!important;
   /* backdrop-filter: blur(90px); */
 }
+
+.selected-project {
+  font-weight: bolder;
+}
