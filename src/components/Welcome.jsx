@@ -85,7 +85,7 @@ const Welcome = () => {
             </p>
             <div>To see what I have been working on, check out my <a href='https://github.com/elysemontano' target='_blank' className="hover:underline text-indigo-400 font-bold">
           GitHub</a>, my <LinkScroll to="projects" className={`text-indigo-400 font-bold hover:underline cursor-pointer ${activeLink === 'projects' ? 'active font-extrabold' : ''}`}>
-            projects</LinkScroll> section, or connect with me on <a href="https://www.linkedin.com/in/elysemontano/" target="_blank" className="text-indigo-400 font-bold hover:underline">LinkedIn</a>. If you would like to hear more about my work history, check out my <NavLink to="/resume"className="text-indigo-400 font-bold hover:underline" target="_blank">resume</NavLink>. Thanks for visiting!</div>
+            projects</LinkScroll> section, or connect with me on <a href="https://www.linkedin.com/in/elysemontano/" target="_blank" className="text-indigo-400 font-bold hover:underline">LinkedIn</a>. If you would like to hear more about my work history, check out my <NavLink to="/resume"className="text-indigo-400 font-bold hover:underline" >resume</NavLink>. Thanks for visiting!</div>
           </div>
         </div>
       </div>

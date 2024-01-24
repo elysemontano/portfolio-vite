@@ -89,6 +89,7 @@ const NavBar = ({ scrollPosition, backgroundColor, printableComponentRef, handle
     } else if (currentRoute.startsWith('/resume')) {
       return (
         <>
+          <LinkRouter to="/">Home</LinkRouter>
           <PrintButton printableComponentRef={printableComponentRef} handlePrint={handlePrint}/>
         </>
       )
