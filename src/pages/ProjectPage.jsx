@@ -8,7 +8,7 @@ import YouTube from "react-youtube";
 import ProjectButtons from "../components/ProjectButtons";
 import ImageModal from "../components/ImageModal";
 
-const ProjectPage = ({isModalOpen, openModal, closeModal, modalImage}) => {
+const ProjectPage = ({modalRef, isModalOpen, openModal, closeModal, modalImage}) => {
   const { id } = useParams();
   const navigate = useNavigate();
   const currentProject = projectData?.find((project) => project.id === +id);
@@ -21,9 +21,9 @@ const ProjectPage = ({isModalOpen, openModal, closeModal, modalImage}) => {
 
   return (
     <>
-      <NavBar backgroundColor={"rgba(62, 52, 91, 0.8)"} />
+      <NavBar backgroundColor={"rgba(62, 52, 91, 0.8)"}  />
       {isModalOpen && (
-              <ImageModal modalImage={modalImage} closeModal={closeModal} />
+              <ImageModal modalImage={modalImage} isModalOpen={isModalOpen} closeModal={closeModal} modalRef={modalRef} />
             )}
       <div className="max-w-[1040px] mx-auto md:pl-4 md:pr-4 lg:pr-20 p-4 py-16 pt-40 text-gray-500 bg-white ">
         <ProjectButtons currentProject={currentProject} />
@@ -50,7 +50,7 @@ const ProjectPage = ({isModalOpen, openModal, closeModal, modalImage}) => {
             {currentProject?.technologies.map((Technology, index) => (
               <p
                 key={index}
-                className="px-1 flex items-center lg:hover-animate"
+                className="px-1 flex items-center"
               >
                 <Technology size={25} />
               </p>
@@ -103,7 +103,7 @@ const ProjectPage = ({isModalOpen, openModal, closeModal, modalImage}) => {
 
         <div id="process" className="lg:hover-animate">
           <h3 className="text-4xl font-bold text-indigo-900 pt-20 text-end max-md:text-left">
-            The <span className="text-indigo-400">process</span> I took
+            My <span className="text-indigo-400">process</span>
           </h3>
           <div className="flex flex-wrap items-center pt-4">
             <img
@@ -120,7 +120,7 @@ const ProjectPage = ({isModalOpen, openModal, closeModal, modalImage}) => {
 
         <div id="lessons" className="lg:hover-animate">
           <h3 className="text-4xl font-bold text-indigo-900 pt-20">
-            Lessons <span className="text-indigo-400">learned</span>
+            My <span className="text-indigo-400">growth</span>
           </h3>
           <div className="flex flex-wrap items-center pt-4 pb-8">
             <p className="w-full md:w-1/2 md:pr-4">{currentProject?.lesson}</p>

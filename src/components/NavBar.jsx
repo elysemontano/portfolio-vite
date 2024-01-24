@@ -4,8 +4,9 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import { Link as LinkRouter, useNavigate } from 'react-router-dom';
 import { Link as LinkScroll, Events, animateScroll as scroll } from 'react-scroll';
 import logo from '../assets/elyse-logo.png';
+import PrintButton from './PrintButton';
 
-const NavBar = ({ scrollPosition, backgroundColor }) => {
+const NavBar = ({ scrollPosition, backgroundColor, printableComponentRef, handlePrint }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
   const [activeLink, setActiveLink] = useState('home');
@@ -85,6 +86,12 @@ const NavBar = ({ scrollPosition, backgroundColor }) => {
           </p>
         </>
       );
+    } else if (currentRoute.startsWith('/resume')) {
+      return (
+        <>
+          <PrintButton printableComponentRef={printableComponentRef} handlePrint={handlePrint}/>
+        </>
+      )
     }
     return null;
   };

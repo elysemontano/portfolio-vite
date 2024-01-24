@@ -19,9 +19,22 @@ const ProjectItem = ({ project, isModalOpen, openModal }) => {
         <h5 className="text-2xl font-bold tracking-wide text-indigo-900">
           {project.name}
         </h5>
+        <div className="flex flex-wrap py-1">
+          {project?.links.map((projectLink, index) => (
+                <a
+                  href={projectLink?.url}
+                  key={index}
+                  className="flex text-xs items-center underline pr-2 lg:hover-animate"
+                  target="_blank"
+                >
+                  <projectLink.icon />
+                  <span className="pl-1">{projectLink?.description}</span>
+                </a>
+              ))}
+        </div>
         <div className="flex flex-wrap mt-2 mb-4">
           {project?.technologies.map((Technology, index) => (
-            <p key={index} className="px-1 flex items-center md:hover-animate">
+            <p key={index} className="px-1 flex items-center">
               <Technology size={20} />
             </p>
           ))}

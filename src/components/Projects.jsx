@@ -11,7 +11,7 @@ const Projects = ({isModalOpen, openModal, closeModal, modalImage}) => {
         <p className='py-8'>Alongside working as an instructor, I like to keep my skills up to date by continuously working on new and exciting things. Technology is always changing and improving, so I like to keep myself improving and helping people with the applications I develop</p>
       </div>
       {isModalOpen && (
-        <ImageModal modalImage={modalImage} closeModal={closeModal} />
+        <ImageModal modalImage={modalImage} isModalOpen={isModalOpen} closeModal={closeModal} />
       )}
       <div className='grid md:grid-cols-2 justify-center items-center md:gap-40 max-md:gap-20'>
         {projectData?.map((project, index) => (
