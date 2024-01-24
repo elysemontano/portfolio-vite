@@ -1,4 +1,4 @@
-import {useState, useRef} from 'react';
+import {useState, useEffect, useRef} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useReactToPrint } from 'react-to-print';
 import NavBar from './components/NavBar';
@@ -17,6 +17,12 @@ const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState(null);
   const printableComponentRef = useRef();
+
+  const handleOutsideClick = (event) => {
+    if (event.target.classList.contains('backdrop-blur-modal')) {
+      closeModal();
+    }
+  };
 
   const handlePrint = useReactToPrint({
     content: () => printableComponentRef.current,
@@ -40,7 +46,7 @@ const App = () => {
     <>
       <Router>
         <Routes>
-          <Route exact path="/" element={<Home isModalOpen={isModalOpen} openModal={openModal} closeModal={closeModal} modalImage={modalImage} printableComponentRef={printableComponentRef} />} />
+          <Route exact path="/" element={<Home isModalOpen={isModalOpen} openModal={openModal} closeModal={closeModal} modalImage={modalImage} printableComponentRef={printableComponentRef} handleOutsideClick={handleOutsideClick} />} />
           <Route path="/project-details/:id" element={<ProjectPage isModalOpen={isModalOpen} openModal={openModal} closeModal={closeModal} modalImage={modalImage} printableComponentRef={printableComponentRef} />} />
           <Route path="/resume" element={<Resume ref={printableComponentRef} handlePrint={handlePrint}/>}/>
           <Route path="*" element={<ErrorPage/>} />

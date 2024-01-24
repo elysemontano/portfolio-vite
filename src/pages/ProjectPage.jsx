@@ -8,7 +8,7 @@ import YouTube from "react-youtube";
 import ProjectButtons from "../components/ProjectButtons";
 import ImageModal from "../components/ImageModal";
 
-const ProjectPage = ({isModalOpen, openModal, closeModal, modalImage}) => {
+const ProjectPage = ({modalRef, isModalOpen, openModal, closeModal, modalImage}) => {
   const { id } = useParams();
   const navigate = useNavigate();
   const currentProject = projectData?.find((project) => project.id === +id);
@@ -23,7 +23,7 @@ const ProjectPage = ({isModalOpen, openModal, closeModal, modalImage}) => {
     <>
       <NavBar backgroundColor={"rgba(62, 52, 91, 0.8)"}  />
       {isModalOpen && (
-              <ImageModal modalImage={modalImage} closeModal={closeModal} />
+              <ImageModal modalImage={modalImage} isModalOpen={isModalOpen} closeModal={closeModal} modalRef={modalRef} />
             )}
       <div className="max-w-[1040px] mx-auto md:pl-4 md:pr-4 lg:pr-20 p-4 py-16 pt-40 text-gray-500 bg-white ">
         <ProjectButtons currentProject={currentProject} />
