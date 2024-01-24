@@ -21,7 +21,7 @@ const ProjectPage = ({isModalOpen, openModal, closeModal, modalImage}) => {
 
   return (
     <>
-      <NavBar backgroundColor={"rgba(62, 52, 91, 0.8)"} />
+      <NavBar backgroundColor={"rgba(62, 52, 91, 0.8)"}  />
       {isModalOpen && (
               <ImageModal modalImage={modalImage} closeModal={closeModal} />
             )}
@@ -50,7 +50,7 @@ const ProjectPage = ({isModalOpen, openModal, closeModal, modalImage}) => {
             {currentProject?.technologies.map((Technology, index) => (
               <p
                 key={index}
-                className="px-1 flex items-center lg:hover-animate"
+                className="px-1 flex items-center"
               >
                 <Technology size={25} />
               </p>
@@ -103,7 +103,7 @@ const ProjectPage = ({isModalOpen, openModal, closeModal, modalImage}) => {
 
         <div id="process" className="lg:hover-animate">
           <h3 className="text-4xl font-bold text-indigo-900 pt-20 text-end max-md:text-left">
-            The <span className="text-indigo-400">process</span> I took
+            My <span className="text-indigo-400">process</span>
           </h3>
           <div className="flex flex-wrap items-center pt-4">
             <img
@@ -120,7 +120,7 @@ const ProjectPage = ({isModalOpen, openModal, closeModal, modalImage}) => {
 
         <div id="lessons" className="lg:hover-animate">
           <h3 className="text-4xl font-bold text-indigo-900 pt-20">
-            Lessons <span className="text-indigo-400">learned</span>
+            My <span className="text-indigo-400">growth</span>
           </h3>
           <div className="flex flex-wrap items-center pt-4 pb-8">
             <p className="w-full md:w-1/2 md:pr-4">{currentProject?.lesson}</p>
