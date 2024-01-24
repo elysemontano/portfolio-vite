@@ -24,7 +24,7 @@ const Footer = () => {
         </a>
         !
       </p>
-      <NavLink to="/resume" target="_blank" className="flex items-center text-indigo-900 pb-3 hover:animate-pulse">
+      <NavLink to="/resume" className="flex items-center text-indigo-900 pb-3 hover:animate-pulse">
         <IoIosDocument />
         <p className="pl-4">Resume</p>
       </NavLink>

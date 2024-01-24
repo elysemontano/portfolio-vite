@@ -47,8 +47,8 @@ const App = () => {
       <Router>
         <Routes>
           <Route exact path="/" element={<Home isModalOpen={isModalOpen} openModal={openModal} closeModal={closeModal} modalImage={modalImage} printableComponentRef={printableComponentRef} handleOutsideClick={handleOutsideClick} />} />
-          <Route path="/project-details/:id" element={<ProjectPage isModalOpen={isModalOpen} openModal={openModal} closeModal={closeModal} modalImage={modalImage} printableComponentRef={printableComponentRef} />} />
           <Route path="/resume" element={<Resume ref={printableComponentRef} handlePrint={handlePrint}/>}/>
+          <Route path="/project-details/:id" element={<ProjectPage isModalOpen={isModalOpen} openModal={openModal} closeModal={closeModal} modalImage={modalImage} printableComponentRef={printableComponentRef} />} />
           <Route path="*" element={<ErrorPage/>} />
         </Routes>
       </Router>
