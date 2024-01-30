@@ -35,7 +35,10 @@ const ProjectItem = ({ project, isModalOpen, openModal }) => {
         <div className="flex flex-wrap mt-2 mb-4">
           {project?.technologies.map((Technology, index) => (
             <p key={index} className="px-1 flex items-center">
-              <Technology size={20} />
+              {(index === 0 || index === 1) ?
+                <Technology size={20} />
+                : ""
+              }
             </p>
           ))}
         </div>

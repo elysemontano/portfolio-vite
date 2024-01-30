@@ -43,7 +43,7 @@ const projectData = [
         whyPic: colabPuzzles,
         processPic: learnProcess,
         lessonPic: solvingProblems,
-        technologies: [IoLogoJavascript, SiRuby, FaHtml5, FaCss3Alt, BiLogoPostgresql, FaReact, SiRubyonrails, SiJest, FaGitAlt],
+        technologies: [FaReact, SiRubyonrails, IoLogoJavascript, SiRuby, FaHtml5, FaCss3Alt, BiLogoPostgresql, SiJest, FaGitAlt],
         links: [
             {icon: AiFillGithub, url: "https://github.com/elysemontano/elyse-lecture-notes", description: "Lecture Notes Repo"},
         ]

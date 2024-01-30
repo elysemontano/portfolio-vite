@@ -8,6 +8,16 @@ import { DiHeroku } from "react-icons/di";
 
 const skillsData = [
   {
+    icon: FaReact,
+    name: "React",
+    category: "framework"
+  },
+  {
+    icon: SiRubyonrails,
+    name: "Rails",
+    category: "framework"
+  },
+  {
     icon: IoLogoJavascript,
     name: "JavaScript",
     category: "language"
@@ -31,16 +41,6 @@ const skillsData = [
     icon: BiLogoPostgresql,
     name: "SQL",
     category: "language"
-  },
-  {
-    icon: FaReact,
-    name: "React",
-    category: "framework"
-  },
-  {
-    icon: SiRubyonrails,
-    name: "Rails",
-    category: "framework"
   },
   {
     icon: SiTailwindcss,

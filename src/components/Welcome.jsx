@@ -37,11 +37,9 @@ const Welcome = () => {
         <h1 className="sm:text-4xl text-4xl text-white font-Rubik font-extrabold tracking-widest pt-20 lg:hover-animate max-md:text-center">
           <span className="tracking-widest text-indigo-200">Hello, I'm </span>Elyse Montano
         </h1>
-        <h2 style={{ fontSize: '1.5rem' }} className="max-md:text-center text-md text-indigo-200 tracking-widest lg:hover-animate">
-            A full stack{" "}
-            <span className="text-indigo-400 font-bold up">developer</span> and
-            web development{" "}
-            <span className="text-indigo-400 font-bold">instructor</span>
+        <h2 style={{ fontSize: '1.5rem' }} className="max-md:text-center text-md text-indigo-200 tracking-widest lg:hover-animate">a {" "}
+            <span className="text-white font-bold up">React </span> and{" "}
+            <span className="text-white font-bold">Rails</span> full stack <span className="text-indigo-400 font-bold">developer</span>
         </h2>
 
         <div className="md:flex items-center md:px-8 lg:hover-animate">
@@ -64,8 +62,7 @@ const Welcome = () => {
           </div>
           <div className="max-md:px-8 max-md:text-center max-sm:text-sm">
             <p className="text-white pt-10 pb-4">
-              I specialize in creating and teaching full-stack applications
-              using Ruby on Rails and React.
+            I am all about writing clean and efficient code that is scalable and tested thoroughly with Jest and Rspec in React and Rails. Along with testing, I love digging into the most recent frameworks and libraries like Vite, and Tailwind. 
             </p>
             <p className="text-white pb-4">
               Before diving into web development, I spent six wonderful years
