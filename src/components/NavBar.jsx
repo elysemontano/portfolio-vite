@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ProjectsDropdown from './ProjectsMenu';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { Link as LinkRouter, useNavigate } from 'react-router-dom';
-import { Link as LinkScroll, Events, animateScroll as scroll } from 'react-scroll';
+import { Link as LinkScroll,  animateScroll as scroll } from 'react-scroll';
 import logo from '../assets/elyse-logo.png';
 import PrintButton from './PrintButton';
 
