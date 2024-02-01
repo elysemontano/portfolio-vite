@@ -62,7 +62,7 @@ const Welcome = () => {
           </div>
           <div className="max-md:px-8 max-md:text-center max-sm:text-sm">
             <p className="text-white pt-10 pb-4">
-            I am all about writing clean and efficient code that is scalable and tested thoroughly with Jest and Rspec in React and Rails. Along with testing, I love digging into the most recent frameworks and libraries like Vite, and Tailwind. 
+            I am a full-stack developer that loves writing clean and efficient code that is scalable and tested thoroughly with Jest, React Testing Library, and Rspec in React and Rails.I have also found great joy in utilizing Tailwind for enhancing the styling aspect of my work. Currently, I am diving deep into Next.js and Typescript to even further my skills with my latest project.
             </p>
             <p className="text-white pb-4">
               Before diving into web development, I spent six wonderful years
