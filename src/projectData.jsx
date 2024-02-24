@@ -2,6 +2,7 @@
 import apartmentApp from './assets/apartmentapp.png'
 import pairingRandomizer from './assets/paring-randomizer.png'
 import teamOrganizer from './assets/team-organizer.png'
+import bandOrganizerDemo from './assets/band-organizer-demo.mp4'
 import fullStackLesson from './assets/full-stack-lesson.png'
 import learnProcess from './assets/learnprocess.png'
 import colabPuzzles from './assets/collaborating-puzzles.webp'
@@ -15,10 +16,15 @@ import dizzySpreadheet from './assets/team-org-spreadsheet.jpeg'
 import apartmentAppFigma from './assets/apartment-app-figma.png'
 import apartmentAppColab from './assets/collaboration.jpg'
 import research from './assets/research.jpg'
+import brainBuddyHome from './assets/brain-buddy-home.png'
+import brainBuddyFigma from './assets/brain-buddy-figma.png'
+import brainBuddySchema from './assets/brain-buddy-schema.png'
+import brainBuddyPlanning from './assets/brain-buddy-planning.jpeg'
+import brainBuddyDemo from './assets/brain-buddy-demo.mp4'
 
 // Icons:
 import { IoLogoJavascript } from "react-icons/io5";
-import { SiRuby, SiRubyonrails, SiJest } from "react-icons/si";
+import { SiRuby, SiRubyonrails, SiJest, SiNextdotjs, SiRedux, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { FaHtml5, FaReact, FaGitAlt } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa6";
 import { BiLogoPostgresql } from "react-icons/bi";
@@ -28,27 +34,28 @@ import { DiHeroku } from "react-icons/di";
 const projectData = [
     {
         id: 1,
-        name: "Development Lessons",
-        descriptionShort: "Over the last 2 years, I have taught numerous students the foundation and fundamentals of web development.",
-        descriptionLong: "Over the past 2 years, I've had the pleasure of teaching students the foundations and essentials of web development. Teaching web development isn't just about delivering lectures and lessons. It's also about creating engaging projects, offering guidance and support to students, and constantly adapting the curriculum to keep up with the ever-evolving technologies. Just like development itself, effective communication is key to ensure that everyone can come along on this exciting journey. Below, you'll find a video of a live lecture over Zoom, where I guided a cohort through an essential moment in full stack web development using Ruby on Rails. By this point, the students had already learned the basics of writing code in Ruby, grasped the Rails MVC architecture, database structures, SQL queries, and are familiar with RESTful routes.",
-        why: "I love collaboration, helping people, and puzzles. Teaching web development has been an incredible opportunity for me to indulge in all of these passions every single day. I am lucky to work with an incredibly passionate team that shares the same drive as me. Together, we get to guide and support students as they embark on a fulfilling career path. And the best part? Building applications feels like a thrilling puzzle that we get to piece together.",
-        process: "Preparing a lesson involves so many important components. It's not just about choosing the right vocabulary, but also making sure that the projects we work on in class align with what the industry is currently doing. That's why research and documentation play a big role in my everyday work. And, to ensure everything runs smoothly in the classroom, staying organized is key.",
-        lesson: "Teaching has always been hailed as one of the most effective ways to truly grasp a subject. When it comes to teaching web development, a significant aspect revolves around guiding students in solving problems and overcoming obstacles. This happens to be the core essence of the development realm itself - coming across challenges that demand us to find solutions. Personally, I have experienced tremendous growth over the years by comprehending the flow of information, deciphering errors, and determining the ultimate goal.",
+        name: "Brain Buddy",
+        descriptionShort: "Brain Buddy is a full stack application built using Rails and Next.js with Redux, Typescript and Tailwind.",
+        descriptionLong: "Brain Buddy is the ultimate companion for your learning journey! Revolutionize the way you study and retain information with our cutting-edge flashcard application. Whether you're a student, professional, or lifelong learner, Brain Buddy adapts to your unique learning style.",
+        why: "As someone in the Ed-tech industry, I was really excited about creating a resource to make studying more enjoyable for students. I believe that repetition is crucial for learning, and using flashcards has been shown to be effective in helping students retain information. With this app, students can not only create their own flashcards but also track their progress and discover new topics to explore. It's all about making the learning process more engaging and interactive for them!",
+        process: "Planning is such a crucial first step in any project. I found that using tools like DB Diagram and Figma really helped me map out the structure and design of my application. It was actually pretty fun exploring new technologies for this project! After looking into different front end frameworks, I decided to go with Next.js because it takes React to a whole new level. And let's not forget about Typescript - it's become super important in the industry and works so well with Next.js. As for state management, I wanted everything to be cohesive, so I went ahead and implemented Redux to keep everything organized and manageable. ",
+        lesson: "Learning multiple new technologies at once can definitely be a challenge, but it's important to remember the end goal and stay focused. One helpful approach is to break down the problem into smaller, manageable steps to make it feel less overwhelming. For example, when working on the frontend, I started by setting up the application with mock data to lay the foundation for the pages. From there, I can gradually add in the functionality piece by piece to connect everything to the correct information. It's all about taking it one step at a time and staying organized!",
         display: {
-            tag: 'video',
-            src: "https://youtu.be/PDoEL58fZWA",
-            notes: "This video has been modified to remove students due to privacy policies."
-        },
-        img1: fullStackLesson,
-        whyPic: colabPuzzles,
-        processPic: learnProcess,
-        lessonPic: solvingProblems,
-        technologies: [FaReact, SiRubyonrails, IoLogoJavascript, SiRuby, FaHtml5, FaCss3Alt, BiLogoPostgresql, SiJest, FaGitAlt],
+          tag: 'mov',
+          src: brainBuddyDemo,
+          notes: ""
+      },
+      technologies: [SiNextdotjs, SiRubyonrails, SiRedux, SiTailwindcss, SiTypescript, FaGitAlt],
+        img1: brainBuddyHome,
+        whyPic: brainBuddyFigma,
+        processPic: brainBuddySchema,
+        lessonPic: brainBuddyPlanning,
         links: [
-            {icon: AiFillGithub, url: "https://github.com/elysemontano/elyse-lecture-notes", description: "Lecture Notes Repo"},
+            {icon: AiFillGithub, url: "https://github.com/elysemontano/brain-buddy-frontend", description: "Frontend Repo"},
+            {icon: AiFillGithub, url: "https://github.com/elysemontano/brain-buddy-backend", description: "Backend Repo"}
         ]
     },
-  {
+    {
       id: 2,
       name: "Pairing Randomizer",
       descriptionShort: "Pairing Randomizer is a React and Rails project that optimizes student pairings on projects.",
@@ -80,8 +87,8 @@ const projectData = [
       process: "I initially chose to build this application with React in Rails as this was a technology that I knew served the purpose of allowing a relational database structure that handles many different types of associations, and a frontend that supports reusable and dynamic components with quick rendering capabilities. During the planning phase, I meticulously designed the database structure, considering potential user needs, while ensuring the data would be accessible and maintainable.",
       lesson: "I was so excited to begin working on this project, that I encountered some initial challenges due to inadequate planning. Specifically, I overlooked the importance of creating a wireframe, which led to some confusion about the overall direction of the application. However, once I realized my mistake, I took it upon myself to be proactive and create a wireframe using Figma, which effectively shaped the vision for the user experience.",
       display: {
-        tag: 'img',
-        src: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDBveWRhenFpZGk2aXJwdGt4Zjlybm9jeTZwN3Q3OTF2ZDg0MGR6dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xjgg1kcHIFkhygWuYT/giphy.gif",
+        tag: 'mov',
+        src: bandOrganizerDemo,
         notes: ""
         },
       img1: teamOrganizer,  
@@ -92,9 +99,31 @@ const projectData = [
       links: [
           {icon: AiOutlineLink, url: "https://chasing-out-foxes-organizer.herokuapp.com/", description: "Deployed App"}
       ]
-  },
-  {
-      id: 4,
+    },
+    {
+        id: 4,
+        name: "Development Lessons",
+        descriptionShort: "Over the last 2 years, I have taught numerous students the foundation and fundamentals of web development.",
+        descriptionLong: "Over the past 2 years, I've had the pleasure of teaching students the foundations and essentials of web development. Teaching web development isn't just about delivering lectures and lessons. It's also about creating engaging projects, offering guidance and support to students, and constantly adapting the curriculum to keep up with the ever-evolving technologies. Just like development itself, effective communication is key to ensure that everyone can come along on this exciting journey. Below, you'll find a video of a live lecture over Zoom, where I guided a cohort through an essential moment in full stack web development using Ruby on Rails. By this point, the students had already learned the basics of writing code in Ruby, grasped the Rails MVC architecture, database structures, SQL queries, and are familiar with RESTful routes.",
+        why: "I love collaboration, helping people, and puzzles. Teaching web development has been an incredible opportunity for me to indulge in all of these passions every single day. I am lucky to work with an incredibly passionate team that shares the same drive as me. Together, we get to guide and support students as they embark on a fulfilling career path. And the best part? Building applications feels like a thrilling puzzle that we get to piece together.",
+        process: "Preparing a lesson involves so many important components. It's not just about choosing the right vocabulary, but also making sure that the projects we work on in class align with what the industry is currently doing. That's why research and documentation play a big role in my everyday work. And, to ensure everything runs smoothly in the classroom, staying organized is key.",
+        lesson: "Teaching has always been hailed as one of the most effective ways to truly grasp a subject. When it comes to teaching web development, a significant aspect revolves around guiding students in solving problems and overcoming obstacles. This happens to be the core essence of the development realm itself - coming across challenges that demand us to find solutions. Personally, I have experienced tremendous growth over the years by comprehending the flow of information, deciphering errors, and determining the ultimate goal.",
+        display: {
+            tag: 'video',
+            src: "https://youtu.be/PDoEL58fZWA",
+            notes: "This video has been modified to remove students due to privacy policies."
+        },
+        img1: fullStackLesson,
+        whyPic: colabPuzzles,
+        processPic: learnProcess,
+        lessonPic: solvingProblems,
+        technologies: [FaReact, SiRubyonrails, IoLogoJavascript, SiRuby, FaHtml5, FaCss3Alt, BiLogoPostgresql, SiJest, FaGitAlt],
+        links: [
+            {icon: AiFillGithub, url: "https://github.com/elysemontano/elyse-lecture-notes", description: "Lecture Notes Repo"},
+        ]
+    },
+    {
+      id: 5,
       name: "Apartment App",
       descriptionShort: "Apartment App is a project as a part of LEARN Academy, where I have integrated many changes to this assignment.",
       descriptionLong: "Apartment App represents a comprehensive application developed within the LEARN Academy bootcamp, utilizing React and Rails. Over the last three years, the application underwent multiple transformations. Originally conceived as a solo project for students to complete before their capstones, the decision was made to switch gears and introduce project management concepts by assigning this project to a small development team. In this capacity, I assumed the role of project manager, assigning tasks to students, overseeing pull requests, and creating assignments. I also took on the responsibility of designing a wireframe for the students to utilize during their development process. Roughly a year ago, the instructional team at LEARN Academy determined it was appropriate to transition away from a monolithic application that combined React and Rails. Instead, we opted to develop a decoupled application, leveraging Devise and JWT for authentication purposes.",
