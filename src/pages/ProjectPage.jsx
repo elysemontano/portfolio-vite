@@ -76,6 +76,13 @@ const ProjectPage = ({modalRef, isModalOpen, openModal, closeModal, modalImage})
               />
             </div>
           )}
+          {DynamicDisplay === "mov" && (
+            <div className="video-responsive">
+              <video autoPlay loop muted playsInline id="video">
+                <source role="video" src={currentProject?.display.src} type="video/mp4" />
+              </video>
+            </div>
+          )}
           {DynamicDisplay === "img" && (
                 <img
                   className="w-full"

@@ -4,6 +4,7 @@ import projectData from '../projectData';
 import ImageModal from './ImageModal';
 
 const Projects = ({isModalOpen, openModal, closeModal, modalImage}) => {
+  const displayProjects = projectData?.filter((project, index) => index !== projectData.length - 1)
   return (
     <div id="projects" className='max-w-[1040px] mx-auto md:px-20 p-4 py-16 text-gray-500'>
       <div className='lg:hover-animate'>
@@ -14,7 +15,7 @@ const Projects = ({isModalOpen, openModal, closeModal, modalImage}) => {
         <ImageModal modalImage={modalImage} isModalOpen={isModalOpen} closeModal={closeModal} />
       )}
       <div className='grid md:grid-cols-2 justify-center items-center md:gap-40 max-md:gap-20'>
-        {projectData?.map((project, index) => (
+        {displayProjects?.map((project, index) => (
           <ProjectItem project={project} key={index} isModalOpen={isModalOpen} openModal={openModal} closeModal={closeModal} modalImage={modalImage}/>
         ))}
       </div>
